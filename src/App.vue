@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <My-Component msg="hello world 2"></My-Component>
     <div v-if="lists.length>0">
         <table>
           <thead>
@@ -36,7 +37,11 @@
 </template>
 
 <script>
+import MyComponent from './MyComponent'
 export default {
+  components: {
+    MyComponent
+  },
   name: "app",
   data() {
     return {
